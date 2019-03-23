@@ -6,7 +6,15 @@ package Wzorce;
  */
 public class App 
 {
-    public static void main( String[] args){
+    public static void main( String[] args )
+    {
+        AccountService as = new AccountService();
+        as.saveUser("Grzegorz", "Petri", 1234, "792-xxx-297", true);
+        as.saveUser("Grzegorz", "Admin", 4321, "509-517-118", true);
+        as.listEm();
+        System.out.println(as.count());
+    }
+    public static void mainSingleton( String[] args){
         System.out.println("Destroy the World!");
         System.out.println("Wzorzec Singleton");
         Session ses = Session.getInstance();

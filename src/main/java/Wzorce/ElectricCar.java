@@ -1,6 +1,6 @@
 package Wzorce;
 
-public class ElectricCar extends Car implements iCar  {
+public class ElectricCar implements iCar  {
     public String getFuel()
     {
         return "Elektryczny";

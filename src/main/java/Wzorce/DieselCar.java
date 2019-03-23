@@ -1,6 +1,6 @@
 package Wzorce;
 
-public class DieselCar extends Car implements iCar {
+public class DieselCar implements iCar {
 
     public String getFuel()
     {

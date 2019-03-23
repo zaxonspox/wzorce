@@ -6,7 +6,20 @@ package Wzorce;
  */
 public class App 
 {
-    public static void main( String[] args )
+    public static void main( String[] args){
+        System.out.println("Destroy the World!");
+        System.out.println("Wzorzec Singleton");
+        Session ses = Session.getInstance();
+        System.out.println(ses.getLang());
+        System.out.println(ses.getUser());
+        ses.loginUser("zaxon");
+        System.out.println("Zalogowano: "+ses.getUser());
+        Session ses2 = Session.getInstance();
+        System.out.println("Nowe logowanie: "+ses2.getUser());
+        System.out.println(ses.logoutUser());
+
+    }
+    public static void mainFactory( String[] args )
     {
         System.out.println( "Destroy the World!" );
         System.out.println( "Wzorzec Factory" );

@@ -1,15 +1,20 @@
 package Wzorce;
 
-public class Formatowanie {
+public class ConsoleFormat implements Decor {
 
     private int dlugosc = 8;    // ustalona długość Definicji
+    private String tekst;
+    private String wartosc;
 
-    public Formatowanie( int dlugosc )
+    public ConsoleFormat( String rawText, int dlugosc )
     {
         this.dlugosc = dlugosc;
+        String[] splt = rawText.split("_");
+        this.tekst = splt[0];
+        this.wartosc = splt[1];
     }
 
-    public String formatujTekst(String tekst, String wartosc)
+    public String getText()//String tekst, String wartosc)
     {   // uzupełnia ciąg znaków do odpowiedniej długości
         String fTekst = ""; // sformatowany tekst
         String spcs = "";   // ciąg uzupełnienia

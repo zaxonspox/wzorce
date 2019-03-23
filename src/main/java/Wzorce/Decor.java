@@ -1,4 +1,5 @@
 package Wzorce;
 
-public class Decor {
+interface Decor {
+    String getText();//String key, String val);
 }

@@ -8,6 +8,23 @@ public class App
 {
     public static void main( String[] args )
     {
+        RawText raw = new RawText("Hasło","masło");
+        String rawTxt = raw.getText();
+        ConsoleFormat fmt = new ConsoleFormat(rawTxt,10);
+        String str1 = fmt.getText();//"Hasło", "masło");
+        System.out.println(str1);
+        HtmlFormat html = new HtmlFormat(rawTxt);
+        String str2 = html.getText();//"Hasło", "masło");
+        System.out.println(str2);
+        PhpFormat php = new PhpFormat(rawTxt);
+        String str3 = php.getText();//"Hasło", "masło");
+        System.out.println(str3);
+        JavaFormat jvc = new JavaFormat(rawTxt);
+        String str4 = jvc.getText();//"Hasło", "masło");
+        System.out.println(str4);
+    }
+    public static void mainAdapter( String[] args )
+    {   // nieskończony
         AccountService as = new AccountService();
         as.saveUser("Grzegorz", "Petri", 1234, "792-xxx-297", true);
         as.saveUser("Grzegorz", "Admin", 4321, "509-517-118", true);
